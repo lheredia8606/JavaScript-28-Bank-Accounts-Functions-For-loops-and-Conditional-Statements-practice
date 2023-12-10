@@ -6,10 +6,13 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
-
+  for (const index in array) {
+    if (array[index] === value){
+      return true;
+    }
+  }
+  return false;
 }
-
 
 
 // === TEST YOURSELF ===

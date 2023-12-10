@@ -9,8 +9,11 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
-
+  let count = 0;
+  for (const key in array) {
+    count += array[key];
+  }
+  return count / array.length;
 }
 
 
@@ -22,8 +25,13 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
-
+  let count = 0;
+  for (const key in str) {
+    if(Number.isInteger(Number(str[key]))){
+      count += Number(str[key]);
+    }
+  }
+  return count;
 }
 
 
